@@ -56,4 +56,4 @@ php bin/magento setup:static-content:deploy
 
 Go to:
 
-<b>Store > Configuration > Razecode > Banner Slider > General Configuration > Display Slider from layout xml file (default)</b>
+`Store > Configuration > Razecode > Banner Slider > General Configuration > Display Slider from layout xml file (default)`
