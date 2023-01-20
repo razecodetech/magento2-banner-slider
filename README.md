@@ -50,13 +50,10 @@ php bin/magento setup:static-content:deploy
 
 <b>1. Add banner manually</b>
 
-```{{block class="Razecode\Banner\Block\BannerSlider" template="Razecode_Banner::bannerslider.phtml" name="razecode.banner"}}
-```
+<code>{{block class="Razecode\Banner\Block\BannerSlider" template="Razecode_Banner::bannerslider.phtml" name="razecode.banner"}}</code>
 
 <b>2. Add banner from admin configuration</b>
 
 Go to:
 
-```
-Store > Configuration > Razecode > Banner Slider > General Configuration > Display Slider from layout xml file (default)
-```
+<b>Store > Configuration > Razecode > Banner Slider > General Configuration > Display Slider from layout xml file (default)</b>
