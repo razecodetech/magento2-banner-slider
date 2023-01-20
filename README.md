@@ -45,3 +45,18 @@ If you don't want to install via composer, you can use this way.
 php bin/magento setup:upgrade
 php bin/magento setup:static-content:deploy
 ```
+
+## Use below code to add Banner on CMS page and Static Block
+
+<b>1. Add banner manually</b>
+
+```{{block class="Razecode\Banner\Block\BannerSlider" template="Razecode_Banner::bannerslider.phtml" name="razecode.banner"}}
+```
+
+<b>2. Add banner from admin configuration</b>
+
+Go to:
+
+```
+Store > Configuration > Razecode > Banner Slider > General Configuration > Display Slider from layout xml file (default)
+```
