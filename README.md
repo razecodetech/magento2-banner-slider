@@ -1,4 +1,4 @@
-# Razecode Banner Slider for Magento 2
+# Magento 2 Banner Slider
 
 [![Latest Stable Version](https://poser.pugx.org/razecode/banner/v/stable)](https://packagist.org/packages/razecode/banner)
 [![Total Downloads](https://poser.pugx.org/razecode/banner/downloads)](https://packagist.org/packages/razecode/banner)
