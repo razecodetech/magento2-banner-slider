@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="razecode" translate="label" sortOrder="10">
+            <label>Razecode</label>
+        </tab>
+        <section id="banner" translate="label" sortOrder="600" showInDefault="1" showInWebsite="1" showInStore="1">
+            <class>separator-top</class>
+            <label>Banner Slider</label>
+            <tab>razecode</tab>
+            <resource>Razecode_Banner::config</resource>
+            <group id="general" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>General Configuration</label>
+                <field id="enable" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Module Enable</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="enable_from_xml" translate="label" type="select" sortOrder="2" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Display Slider from layout xml file (default)</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment><![CDATA[Banner Slider will display from layout XML file cms_index_index.xml. Disable this if want to add manually.]]></comment>
+                </field>
+                <field id="effect" translate="label" sortOrder="3" type="select" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Transition Effect</label>
+                    <source_model>Razecode\Banner\Model\Source\Effects</source_model>
+                    <comment><![CDATA[Leave empty to use simple horizontal scrolling animation.]]></comment>
+                </field>
+                <field id="timeout" translate="label" sortOrder="4" type="text" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Timeout</label>
+                    <comment>Time (in milliseconds) between slide transitions. Enter "0" to disable automatic transition. Note that 1000 miliseconds = 1 second.</comment>
+                </field>
+                <field id="speed" translate="label" sortOrder="5" type="text" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Scrolling Speed</label>
+                    <comment>Duration (in milliseconds) of horizontal scrolling animation. Applied to horizontal scrolling with arrows and touch swipe.</comment>
+                </field>
+                <field id="auto_speed" translate="label" sortOrder="6" type="text" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Automatic Scrolling Speed</label>
+                    <comment><![CDATA[Duration (in milliseconds) of horizontal scrolling animation. Applied to automatic horizontal scrolling (if <strong>Timeout</strong> was specified) and to horizontal scrolling with pagination.]]></comment>
+                </field>
+                <field id="smooth_height" translate="label" sortOrder="7" type="select" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Smooth Height</label>
+                    <source_model>Magento\Config\Model\Config\Source\Enabledisable</source_model>
+                    <comment>Enable, if your slides do not have the same height. It will allow height of the slideshow to animate smoothly.</comment>
+                </field>
+                <field id="pause" translate="label" sortOrder="8" type="select" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Pause on Hover</label>
+                    <source_model>Magento\Config\Model\Config\Source\Enabledisable</source_model>
+                    <comment>If enabled, when the mouse is over the slideshow the automatic transition functionality will pause.</comment>
+                </field>
+                <field id="loop" translate="label" sortOrder="9" type="select" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Loop</label>
+                    <source_model>Magento\Config\Model\Config\Source\Enabledisable</source_model>
+                    <comment>If enabled, slideshow will automatically loop.</comment>
+                </field>
+                <field id="navigation" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Navigation Enable</label>
+                    <source_model>Magento\Config\Model\Config\Source\Enabledisable</source_model>
+                </field>
+                <field id="pagination" translate="label" type="select" sortOrder="11" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Pagination Enable</label>
+                    <source_model>Magento\Config\Model\Config\Source\Enabledisable</source_model>
+                </field>
+            </group>
+            <group id="slider_info" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Code for CMS Page to display Manually</label>
+                <field id="slider_block_info" translate="label" sortOrder="10" showInDefault="1" showInWebsite="1">
+                    <frontend_model>Razecode\Banner\Block\Adminhtml\System\Config\Field\SliderBlockInfo</frontend_model>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

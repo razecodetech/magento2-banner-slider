@@ -1,0 +1,19 @@
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    
+    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+        <arguments>
+            <argument name="collections" xsi:type="array">
+            <item name="razecode_banner_slide_listing_data_source" xsi:type="string">Razecode\Banner\Model\ResourceModel\Slide\Grid\Collection</item>
+            </argument>
+        </arguments>
+    </type>
+    <type name="Razecode\Banner\Model\ResourceModel\Slide\Grid\Collection">
+        <arguments>
+            <argument name="mainTable" xsi:type="string">razecode_banner</argument>
+            <argument name="eventPrefix" xsi:type="string">razecode_banner_slide_grid_collection</argument>
+            <argument name="eventObject" xsi:type="string">slide_grid_collection</argument>
+            <argument name="resourceModel" xsi:type="string">Razecode\Banner\Model\ResourceModel\Slide</argument>
+        </arguments>
+    </type>
+    
+</config>

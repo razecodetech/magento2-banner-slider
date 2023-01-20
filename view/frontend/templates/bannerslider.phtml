@@ -1,0 +1,90 @@
+<?php
+
+/** @var \Razecode\Banner\Block\Banner $block */
+$slideCollection = $block->getBannerSliders();
+if ($slideCollection && $slideCollection->count()): ?>
+    <?php
+        $fx = $block->getConfigValue('general/effect');
+        $timeout = intval($block->getConfigValue('general/timeout'));
+        $loop = $block->getConfigValue('general/loop');
+        $speed = intval($block->getConfigValue('general/speed'));
+        $autoSpeed = intval($block->getConfigValue('general/auto_speed'));
+        $pause = $block->getConfigValue('general/pause');
+        $smoothHeight = $block->getConfigValue('general/smooth_height');
+        $navButtons = $block->getConfigValue('general/navigation');
+        $pagination = $block->getConfigValue('general/pagination');
+    ?>
+
+    <div class="slideshow-wrapper-additional razecode-banner-slider">
+        <div class="slideshow-wrapper-outer">
+            <div class="slideshow-wrapper slider-arrows slider-pagination">
+                <div id="bannerslider" class="slideshow owl-carousel owl-theme">
+                    <?php foreach ($slideCollection as $slide): ?>
+                        <?php if ($slide->getSlideImageDesktop()):?>
+                            <?php
+                                $slide_image_desktop_url = $block->getMediaUrl() . $slide->getSlideImageDesktop();
+
+                                if ($slide->getLink()) {
+                                    $link = $slide->getLink();
+                                } else {
+                                    $link = '';
+                                }
+                            ?>
+                            <div class="item">
+                                <img class="image"
+                                     src="<?= $slide_image_desktop_url ?>"
+                                     alt="<?= $block->escapeHtmlAttr($slide->getTitle()) ?>" />
+                                <div class="slide_content"><?= $slide->getContent(); ?></div>
+                            </div>
+                        <?php endif; ?>
+                    <?php endforeach; ?>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        requirejs(['jquery', 'owlcarousel'], function (jQuery, owlcarousel) {
+            jQuery(function ($) {
+                var owl = $('#bannerslider');
+                owl.owlCarousel({
+                    "navigationText": false,
+                    "addClassActive": true,
+                    "singleItem": true,
+                    "items": 1
+                    <?php if (!empty($fx)): ?>
+                    , "slideTransition": "<?= $fx; ?>"
+                    <?php endif; ?>
+                    <?php if ($speed): ?>
+                    , "autoplaySpeed": <?= $speed; ?>
+                    <?php endif; ?>
+                    <?php if ($autoSpeed): ?>
+                    , "dotsSpeed": <?= $autoSpeed; ?>
+                    <?php endif; ?>
+                    <?php if ($loop == 1): ?>
+                    , "autoplay": true
+                    , "loop": true
+                    <?php else: ?>
+                    , "autoplay": false
+                    , "loop": false
+                    <?php endif; ?>
+                    <?php if ($pause): ?>
+                    , "autoplayHoverPause": true
+                    <?php endif; ?>
+                    <?php if ($pagination == 1): ?>
+                    , "dots": true
+                    <?php else: ?>
+                    , "dots": false
+                    <?php endif; ?>
+                    <?php if ($navButtons == 1): ?>
+                    , "nav": true
+                    <?php else: ?>
+                    , "nav": false
+                    <?php endif; ?>
+                    <?php if ($smoothHeight): ?>
+                    , "autoHeight": true
+                    <?php endif; ?>
+                });
+            });
+        });
+    </script>
+<?php endif; ?>

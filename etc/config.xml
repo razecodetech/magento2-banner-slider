@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <banner>
+            <general>
+                <enable>1</enable>
+                <enable_from_xml>1</enable_from_xml>
+                <effect/>
+                <timeout>10000</timeout>
+                <speed>200</speed>
+                <auto_speed>500</auto_speed>
+                <smooth_height>0</smooth_height>
+                <pause>1</pause>
+                <loop>1</loop>
+                <navigation>1</navigation>
+                <pagination>1</pagination>
+            </general>
+        </banner>
+    </default>
+</config>

@@ -1,0 +1,48 @@
+<?php
+// @codingStandardsIgnoreFile
+/**
+ * @see \Razecode\Banner\Block\Adminhtml\System\Config\Field\SliderBlockInfo
+ * @var \Razecode\Banner\Block\Adminhtml\System\Config\Field\SliderBlockInfo $block
+ */
+
+?>
+<div class="banner-info-block">
+    <div class="attachment-note"><?= __('Use below code to show Banner Slider on CMS or Static Blocks') ?></div>
+    <div class="userguide-container">
+        <div id="messages">
+            <ul class="messages">
+                <li class="message message-notice notice" style="list-style: none;">
+                    <ul>
+                        <li style="list-style: none;">
+                            Use this code to show Slider
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <code>
+            {{block class="Razecode\Banner\Block\BannerSlider" template="Razecode_Banner::bannerslider.phtml" name="razecode.banner"}}
+        </code>
+    </div>
+</div>
+<style type="text/css">
+    .banner-info-block .userguide-container {
+        border: dotted 1px #ccc;
+        padding: 20px;
+        margin-top: 25px;
+    }
+
+    .banner-info-block .attachment-note {
+        font-weight: bold;
+        margin-top: 30px;
+        text-align: center;
+        font-size: 16px;
+    }
+    ul.banner-parameters {
+        list-style: none;
+    }
+    ul.banner-parameters li {
+        padding: 5px;
+    }
+</style>
+

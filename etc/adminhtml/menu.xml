@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+    	<add id="Razecode_Banner::banner"
+             title="Razecode"
+             module="Razecode_Banner"
+             sortOrder="20"
+             parent="Magento_Backend::content"
+             resource="Razecode_Banner::banner"
+        />
+        <add id="Razecode_Banner::slide_lists"
+             title="Banner Slider"
+             module="Razecode_Banner"
+             sortOrder="1"
+             action="razecode_banner/slide/index"
+             parent="Razecode_Banner::banner"
+             resource="Razecode_Banner::slide_lists"
+        />
+    </menu>
+</config>

@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <css src="Razecode_Banner::css/razecode-banner.css"/>
+        <css src="Razecode_Base::owlcarousel/assets/owl.carousel.min.css"/>
+    </head>
+    <body>
+        <referenceContainer name="page.wrapper">
+            <block ifconfig="banner/general/enable_from_xml" class="Razecode\Banner\Block\BannerSlider" name="razecode.banner" before="main.content" template="Razecode_Banner::bannerslider.phtml" />
+        </referenceContainer>
+    </body>
+</page>
