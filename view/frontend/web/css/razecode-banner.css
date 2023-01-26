@@ -104,3 +104,10 @@
 .razecode-banner-slider .owl-carousel .owl-dots .owl-dot:hover {
 	background: #869791;
 }
+.razecode-banner-slider .slide_content{
+	left: 8%;
+	top: 40%;
+	transform: translateY(-50%);
+	position: absolute;
+	width: 40%;
+}

@@ -37,7 +37,7 @@ php bin/magento setup:di:compile
 
 If you don't want to install via composer, you can use this way. 
 
-- Download [the latest version here](https://github.com/razecodetech/banner/archive/master.zip) 
+- Download [the latest version here](https://github.com/razecodetech/magento2-banner-slider/archive/refs/heads/main.zip) 
 - Extract `master.zip` file to `app/code/Razecode/Banner` ; You should create a folder path `app/code/Razecode/Banner` if not exist.
 - Go to Magento root folder and run upgrade command line to install `Razecode_Banner`:
 
@@ -57,3 +57,9 @@ php bin/magento setup:static-content:deploy
 Go to:
 
 `Store > Configuration > Razecode > Banner Slider > General Configuration > Display Slider from layout xml file (default)`
+
+<b>NOTE:</b>
+
+This extension requires base module. 
+
+Download Base Module [latest version here](https://github.com/razecodetech/module-base/archive/refs/heads/main.zip) 
