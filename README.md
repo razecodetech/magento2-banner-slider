@@ -7,7 +7,9 @@
 
 ### 1. Install via composer (recommend)
 
-We recommend you to install Razecode_Banner module via composer. It is easy to install, update and maintaince.
+We recommend you to install Razecode_Banner module via composer. It is easy to install, update and maintaince. 
+
+Please use composer 2 to avoid any error while installing.
 
 Run the following command in Magento 2 root folder.
 
@@ -32,6 +34,9 @@ Run compile if your store in Production mode:
 ```
 php bin/magento setup:di:compile
 ```
+
+## Screenshot
+[![homepage-banner-slider.png](https://i.postimg.cc/jjLgL4B1/homepage-banner-slider.png)](https://postimg.cc/zLYSQKzw)
 
 ### 2. Copy and paste
 
