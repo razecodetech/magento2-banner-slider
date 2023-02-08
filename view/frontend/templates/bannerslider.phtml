@@ -31,10 +31,12 @@ if ($slideCollection && $slideCollection->count()): ?>
                                 }
                             ?>
                             <div class="item">
-                                <img class="image"
-                                     src="<?= $slide_image_desktop_url ?>"
-                                     alt="<?= $block->escapeHtmlAttr($slide->getTitle()) ?>" />
-                                <div class="slide_content"><?= $slide->getContent(); ?></div>
+                                <a href="<?= $block->escapeUrl($link) ?>">
+                                    <img class="image"
+                                         src="<?= $slide_image_desktop_url ?>"
+                                         alt="<?= $block->escapeHtmlAttr($slide->getTitle()) ?>" />
+                                    <div class="slide_content"><?= $slide->getContent(); ?></div>
+                                </a>
                             </div>
                         <?php endif; ?>
                     <?php endforeach; ?>

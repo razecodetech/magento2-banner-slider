@@ -35,9 +35,6 @@ Run compile if your store in Production mode:
 php bin/magento setup:di:compile
 ```
 
-## Screenshot
-[![homepage-banner-slider.png](https://i.postimg.cc/jjLgL4B1/homepage-banner-slider.png)](https://postimg.cc/zLYSQKzw)
-
 ### 2. Copy and paste
 
 If you don't want to install via composer, you can use this way. 
@@ -50,6 +47,9 @@ If you don't want to install via composer, you can use this way.
 php bin/magento setup:upgrade
 php bin/magento setup:static-content:deploy
 ```
+
+## Screenshot
+[![homepage-banner-slider.png](https://i.postimg.cc/jjLgL4B1/homepage-banner-slider.png)](https://postimg.cc/zLYSQKzw)
 
 ## Use below code to add Banner on CMS page and Static Block
 
