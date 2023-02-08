@@ -1,5 +1,4 @@
 <?php
-
 /** @var \Razecode\Banner\Block\Banner $block */
 $slideCollection = $block->getBannerSliders();
 if ($slideCollection && $slideCollection->count()): ?>
@@ -14,7 +13,6 @@ if ($slideCollection && $slideCollection->count()): ?>
         $navButtons = $block->getConfigValue('general/navigation');
         $pagination = $block->getConfigValue('general/pagination');
     ?>
-
     <div class="slideshow-wrapper-additional razecode-banner-slider">
         <div class="slideshow-wrapper-outer">
             <div class="slideshow-wrapper slider-arrows slider-pagination">

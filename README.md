@@ -9,7 +9,7 @@
 
 We recommend you to install Razecode_Banner module via composer. It is easy to install, update and maintaince. 
 
-Please use composer 2 to avoid any error while installing.
+NOTE: Please use composer 2 to avoid any error while installing.
 
 Run the following command in Magento 2 root folder.
 
